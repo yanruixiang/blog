@@ -10,8 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+    Route::get('',function(){
+        return view('welcome',['name'=>'小辣椒']);
+    });
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/user','userController@index');
+
+
+
+  Route::get('/student/index','StudentController@index');
+  Route::get('/student/create','StudentController@create');
+  Route::any('/student/save','StudentController@save');
+  Route::get('/student/delete/','StudentController@delete');
+  Route::get('/student/edit/{id}','StudentController@edit');
+  Route::post('/student/update/','StudentController@update');
+
+
+
+
+
+?>
