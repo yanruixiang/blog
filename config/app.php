@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'PRC',
 
     /*
     |--------------------------------------------------------------------------
@@ -227,6 +227,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+    'img_url' => env('IMG_URL','http://uploads.myshop.com/'),
     'pageSize'=>'2',
 
 ];

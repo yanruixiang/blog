@@ -8,7 +8,7 @@
 <form action="/student/update" method="post">
     <input type="hidden" name="id" value="{{$data->id}}">
 @csrf
-    <table border='1'>
+    <table border='1' align="center">
         <tr>
             <td>学生姓名:</td>
             <td><input type="text" name="name" value="{{$data->name}}"></td>

@@ -16,7 +16,7 @@ class StudentController extends Controller
 
     public function create()
     {
-        dd($redis);
+        // dd($redis);
         $redis = new \Redis();
         $redis->connect('127.0.0.1','6379');
         $num=$redis->get('num');
@@ -38,12 +38,7 @@ class StudentController extends Controller
         //分页
         $pagesize=config('app.pageSize');
         $data = DB::table('y_student')->where($where)->paginate($pagesize);
-        // dd($data);die;
-
-        //测试用 可删除
-        echo 111;
-
-        return view('studentcontroller/index',['data'=>$data,'keywords'=>'$keywords']);
+        return view('studentcontroller/index',['data'=>$data,'keywords'=>$keywords]);
     }
     public function save(Request $request)
     {

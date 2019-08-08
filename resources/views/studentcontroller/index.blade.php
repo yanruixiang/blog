@@ -6,10 +6,10 @@
 </head>
 <link rel="stylesheet" type="text/css" href="{{asset('css/page.css')}}">
 <body>
-    <form>
-        <input type="text" name="keywords" placeholder="请输入关键字"><button>提交</button>
+    <form align="center">
+        <input type="text" name="keywords" placeholder="请输入关键字" value="{{$keywords}}"><button>提交</button>
     </form>
-    <table border="1" cellspacing="0">
+    <table border="1" cellspacing="0" align="center">
         <tr>
             <td>ID</td>
             <td>学生姓名</td>
@@ -30,6 +30,6 @@
         </tr>
     @endforeach
     </table>
-    {{$data->links()}}
+    <center>{{$data->appends(['keywords'=>$keywords])->links()}}</center>
 </body>
 </html>
